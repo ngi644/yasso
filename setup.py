@@ -8,6 +8,7 @@ requires = [
     'pycrypto',
     'pyramid',
     'pyramid_who',
+    'pyramid_chameleon',
     'randenc',
     'repoze.who>=2.0',
 ]
