@@ -18,11 +18,12 @@ var/Data.fs*
 bin/activate*
 bin/bfg2pyramid
 bin/buildout
-bin/coverage
+bin/coverage*
 bin/easy_install*
 bin/nosetests
 bin/nosetests-*
 bin/pcreate
+bin/pdistreport
 bin/pip
 bin/pip-*
 bin/prequest
@@ -32,5 +33,9 @@ bin/pshell
 bin/ptweens
 bin/pviews
 bin/py
+bin/waitress-serve
 bin/python
 bin/yassoctl
+bin/.keep
+ngi*.ini
+auth.sqlite

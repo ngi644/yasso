@@ -1,4 +1,4 @@
-
+# encoding: utf-8
 from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.config import Configurator
 from pyramid_who.whov2 import WhoV2AuthenticationPolicy
@@ -8,6 +8,7 @@ from yasso import tokenviews
 from yasso.models import AuthorizationServer
 from yasso.policy import BearerAuthenticationPolicy
 from yasso.policy import ClientAuthenticationPolicy
+from yasso.db import initdb
 import re
 
 
@@ -77,6 +78,7 @@ class CompositeApp(object):
     resource_re = re.compile(r'^/?resource(/|$)')
 
     def __init__(self, global_config, **settings):
+        initdb(settings)
         self.root_factory = make_root_factory(global_config, settings)
         self.authorize_app = authorize_app(
             global_config, root_factory=self.root_factory, **settings)

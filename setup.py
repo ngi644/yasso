@@ -8,9 +8,13 @@ requires = [
     'pycrypto',
     'pyramid',
     'pyramid_who',
+    'repoze.who.plugins.sa',
     'pyramid_chameleon',
+    'sqlalchemy',
+    'zope.sqlalchemy',
     'randenc',
     'repoze.who>=2.0',
+    'cryptacular'
 ]
 
 if sys.version_info[:2] < (2, 7):
@@ -24,7 +28,7 @@ setup(
     name='yasso',
     version='0.1',
     description='Yet Another Single Sign-On: An OAuth2 Provider',
-    long_description=README + '\n\n' +  CHANGES,
+    long_description=README + '\n\n' + CHANGES,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
